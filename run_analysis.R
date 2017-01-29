@@ -36,4 +36,4 @@ allData$subject <- as.factor(allData$subject)
 allData.melted <- melt(allData, id = c("subject", "activity"))
 allData.mean <- dcast(allData.melted, subject + activity ~ variable, mean)
 
-write.csv(allData.mean, "tidy.csv", row.names = FALSE, quote = FALSE)
+write.table(allData.mean, "tidy.txt", row.names = FALSE, quote = FALSE)
